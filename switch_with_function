@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<math.h>
+void factorial(){
+    int n;
+     printf("enter the number to calculate factorial\n");
+     scanf("%d",&n);
+    int fact=1;
+    for (int i = n; i>1; i--)
+    {
+    fact =fact*i;
+    }
+    printf("Factorial of the number is %d",fact);
+}
+void power(){
+    int x,y,pow =1;
+     printf("enter the number and Power\n");
+     scanf("%d%d",&x,&y);
+    for (int i = y; i>=1; i--)
+    {
+    pow *=x;
+    }
+    printf("power of number is %d",pow);
+}
+void add(){
+    int a,b;
+     printf("enter the two number to sum\n");
+     scanf("%d%d",&a,&b);
+    printf("Sum is = %d",a+b);
+}
+    void main(){
+        int n;
+        printf("enter the value of n\n");
+        scanf("%d",&n);
+        switch (n)
+        {
+        case 1:
+            factorial();
+            break;
+        case 2:
+            power();
+            break;
+        case 3:
+             add();
+            break;
+        default:
+        printf("choose valid choice");
+            break;
+        } 
+    }
