@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<math.h>
+ void arm(){
+        int n ,length=0,rem,mul=1,arm=0;
+        printf("enter the number n \n");
+        scanf("%d",&n);
+        int t1=n , t2 =n;
+      while(t1!=0)
+      {
+         t1= t1/10;
+         length++;
+      }
+      while(t2!=0)
+      {
+          rem =t2%10;
+          for(int i=1; i<=length; i++){
+           mul*=rem;
+           }
+           arm += mul;
+           t2 =t2/10; 
+           mul=1;    
+      }
+      if(arm==n){
+      printf("number is armstrong %d",arm);}  
+      else
+      printf("It is not armstrong");
+        }
+        void prime(){
+          int i,n,count=0; 
+          printf("enter num");
+          scanf("%d",&n);
+    for(i=2; i<=n; i++){
+        if(n%i==0){
+        count++;
+
+        }
+    }
+    if(count==1){
+        printf("num is  prime");
+    }
+    else
+    {
+        printf("its not prime");
+    }
+        }
+        void main(){
+          int n;
+        printf("enter 1 for armstrong, 2 for prime  \n");
+        scanf("%d",&n);
+        switch (n)
+        {
+        case 1:
+          arm();
+          break;
+          case 2:
+          prime();
+          break;
+        default:
+        printf("It is wrong input");
+          break;
+        }
+
+        }
